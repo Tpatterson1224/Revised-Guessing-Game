@@ -1,13 +1,11 @@
 package edu.guilford;
-
+import java.util.Random;
 import java.util.Scanner; // in future projects, you need to enter this
 
 public class Main {
 
     public static void main(String[] args) {   
-        Scanner myScan = new Scanner(System.in); // creates scanner
-
-        System.out.println("Tests whether integer is even."); 
+        /* System.out.println("Tests whether integer is even."); 
 
         System.out.print("Input value: "); // use print so it's on same line
         int value = myScan.nextInt();        // inputs value as int
@@ -32,6 +30,32 @@ public class Main {
             counter--;                          // counter should be decreased in the loop
         }                                       // loop repeats if we still have counter > 1
 
-        System.out.println(value + "! = " + product);   // outputs result
+        System.out.println(value + "! = " + product);   // outputs result */
+        Random rand = new Random();
+
+     int value = rand.nextInt(5) + 1; 
+
+        Scanner myScan = new Scanner(System.in);
+
+         int guess = 0;
+
+         while (guess != value) { System.out.print("Guess an integer from 1 to 5: "); 
+
+         guess = myScan.nextInt(); 
+
+         if (guess > value) { 
+            System.out.println("Your guess is too high. Try again."); } 
+
+          else if (guess < value) { 
+            System.out.println("Your guess is too low. Try again."); }
+
+           else { System.out.println("Congratulations! You got it right."); } }
+            System.out.println("Thank you for playing the Guessing Game!");
+            myScan.close();
+         }
+         
     }
-}
+
+
+
+
